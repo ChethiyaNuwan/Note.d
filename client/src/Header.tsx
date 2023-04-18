@@ -1,4 +1,4 @@
-import { AppBar } from "@mui/material";
+import AppBar from "@mui/material/AppBar";
 
 export default function Header() {
   return (
@@ -6,7 +6,8 @@ export default function Header() {
       sx={{
         backgroundColor: "transparent",
         boxShadow: 0,
-        padding: "10px"
+        padding: "10px",
+        position: "sticky",
       }}
     >
       <img src="../logo.png" alt="logo" width="250px" />
