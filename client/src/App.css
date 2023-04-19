@@ -4,9 +4,17 @@
 }
 
 .MuiAccordionSummary-content{
-    margin: 10px 0 0 0 !important;
+    margin: 10px 0 !important;
 }
 
 .Mui-focusVisible{
     background-color: white !important;
+}
+
+.MuiAccordionDetails-root{
+    padding: 0 16px !important;
+}
+
+.MuiAccordion-root{
+    border-radius: 10px !important;
 }
