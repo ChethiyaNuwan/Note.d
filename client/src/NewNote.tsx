@@ -7,7 +7,9 @@ export default function NewNote() {
     <Accordion
       sx={{
         width: "50%",
-        margin: "20px auto",
+        left: "25%",
+        right: "25%",
+        top: "20px",
       }}
     >
       <AccordionSummary>jnkjn</AccordionSummary>
