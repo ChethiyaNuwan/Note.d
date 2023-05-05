@@ -5,12 +5,7 @@ import { useState } from "react";
 import Typography from "@mui/material/Typography";
 import Input from "@mui/material/Input";
 import { AccordionActions, Button, Stack } from "@mui/material";
-
-interface Note {
-  id: number;
-  title: string;
-  note: string;
-}
+import { Note } from "../models/NoteModel";
 
 export default function NewNote() {
   const [isExpanded, setIsExpanded] = useState(false);

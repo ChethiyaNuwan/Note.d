@@ -1,6 +1,6 @@
 import './App.css'
-import Header from './Header'
-import NewNote from './NewNote'
+import Header from './components/Header'
+import NewNote from './components/NewNote'
 
 function App() {
   return (
