@@ -14,24 +14,24 @@ interface Note {
 
 export default function NewNote() {
   const [isExpanded, setIsExpanded] = useState(false);
-  const notes: Note[] = [];
-  const [note, setNote] = useState("");
+  const [notes,setNotes] = useState<Note[]>([]);
+  const [noteText, setNoteText] = useState("");
 
   const handleCancel = () => {
-    setNote("");
+    setNoteText("");
     setIsExpanded(false);
   };
 
   const handleSave = (e: any) => {
     e.preventDefault();
     setIsExpanded(false);
-    notes.push({
+    const newNote ={
       id: Math.floor(Math.random() * 1000),
       title: e.target.title.value,
       note: e.target.note.value,
-    });
-    setNote("");
-    console.log(notes);
+    };
+    setNotes([...notes, newNote]);
+    setNoteText("");
   };
 
   return (
@@ -81,8 +81,8 @@ export default function NewNote() {
             minRows={10}
             maxRows={10}
             name="note"
-            value={note}
-            onChange={(e) => setNote(e.target.value)}
+            value={noteText}
+            onChange={(e) => setNoteText(e.target.value)}
           ></Input>
         </AccordionDetails>
         <AccordionActions>
