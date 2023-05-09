@@ -3,3 +3,8 @@ export interface Note {
     title: string;
     note: string;
 }
+
+export interface NotesProp {
+    notes: Note[];
+    setNotes: React.Dispatch<React.SetStateAction<Note[]>>;
+}
