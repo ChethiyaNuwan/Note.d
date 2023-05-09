@@ -5,11 +5,11 @@ import { useState } from "react";
 import Typography from "@mui/material/Typography";
 import Input from "@mui/material/Input";
 import { AccordionActions, Button, Stack } from "@mui/material";
-import { Note } from "../models/NoteModel";
+import { NotesProp } from "../models/NoteModel";
 
-export default function NewNote() {
+export default function NewNote({notes,setNotes}:NotesProp) {
+
   const [isExpanded, setIsExpanded] = useState(false);
-  const [notes,setNotes] = useState<Note[]>([]);
   const [noteText, setNoteText] = useState("");
 
   const handleCancel = () => {
