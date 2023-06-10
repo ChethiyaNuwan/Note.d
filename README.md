@@ -1,7 +1,7 @@
 # Note'd
-a simple note keeping app
+a note keeping web application
 
 ## Tech stack
 - React with TS
 - Node JS
-- Mongo DB
+- MySQL
