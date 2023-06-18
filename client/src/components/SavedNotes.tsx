@@ -1,15 +1,19 @@
 import { NotesProp } from "../models/NoteModel";
+import {Card, CardContent, CardHeader} from "@mui/material";
 
-export let some=5;
 export default function SavedNotes({notes,setNotes}:NotesProp){
     
     return(
-        <div>
+        <div className="card-list">
             {notes.map((note)=>{
                 return(
                     <div key={note.id}>
-                        <h4>{note.title}</h4>
-                        <p>{note.note}</p>
+                        <Card>
+                            <CardHeader title={note.title}></CardHeader>
+                            <CardContent>
+                                {note.note}
+                            </CardContent>
+                        </Card>
                     </div>
                 )
             })

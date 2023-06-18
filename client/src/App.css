@@ -18,3 +18,22 @@
 .MuiAccordion-root{
     border-radius: 10px !important;
 }
+
+.card-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
+    grid-gap: 20px;
+    margin: 100px 20px 0;
+    justify-content: center;
+}
+
+.MuiCard-root{
+    border-radius: 10px !important;
+    height: 100%;
+    background-color: lightskyblue !important;
+}
+
+.MuiCardContent-root{
+    max-height: 100px;
+    overflow: auto;
+}
