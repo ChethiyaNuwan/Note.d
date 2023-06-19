@@ -34,6 +34,11 @@
 }
 
 .MuiCardContent-root{
+    padding-top: 0 !important;
     max-height: 100px;
     overflow: auto;
+}
+
+.MuiCardHeader-action{
+    margin: -11px -11px !important;
 }

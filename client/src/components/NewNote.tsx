@@ -10,10 +10,11 @@ import { NotesProp } from "../models/NoteModel";
 export default function NewNote({notes,setNotes}:NotesProp) {
 
   const [isExpanded, setIsExpanded] = useState(false);
-  const [noteText, setNoteText] = useState("");
+  const [body, setBody] = useState("");
+  const [title, setTitle] = useState("");
 
   const handleCancel = () => {
-    setNoteText("");
+    setBody("");
     setIsExpanded(false);
   };
 
@@ -23,10 +24,10 @@ export default function NewNote({notes,setNotes}:NotesProp) {
     const newNote ={
       id: Math.floor(Math.random() * 1000),
       title: e.target.title.value,
-      note: e.target.note.value,
+      note: e.target.body.value,
     };
     setNotes([...notes, newNote]);
-    setNoteText("");
+    setBody("");
   };
 
   return (
@@ -75,9 +76,9 @@ export default function NewNote({notes,setNotes}:NotesProp) {
             multiline
             minRows={10}
             maxRows={10}
-            name="note"
-            value={noteText}
-            onChange={(e) => setNoteText(e.target.value)}
+            name="body"
+            value={body}
+            onChange={(e) => setBody(e.target.value)}
           ></Input>
         </AccordionDetails>
         <AccordionActions>
