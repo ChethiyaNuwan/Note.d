@@ -40,5 +40,10 @@
 }
 
 .MuiCardHeader-action{
+    visibility: hidden;
     margin: -11px -11px !important;
+}
+
+.MuiCard-root:hover .MuiCardHeader-action{
+    visibility: visible;
 }

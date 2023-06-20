@@ -19,26 +19,24 @@ export default function SavedNotes({notes, setNotes}: NotesProp) {
         <div className="card-list">
             {notes.map((note) => {
                 return (
-                    <div key={note.id}>
-                        <Card>
-                            <CardHeader
-                                title={note.title}
-                                action={
-                                    <>
-                                        <IconButton size={'small'} onClick={handleDelete(note.id)}>
-                                            <Icon fontSize={'small'}>delete</Icon>
-                                        </IconButton>
-                                        <IconButton size={'small'} onClick={handleEdit(note)}>
-                                            <Icon fontSize={'small'}>edit</Icon>
-                                        </IconButton>
-                                    </>
+                    <Card key={note.id} >
+                        <CardHeader
+                            title={note.title}
+                            action={
+                                <>
+                                    <IconButton size={'small'} onClick={handleDelete(note.id)}>
+                                        <Icon fontSize={'small'}>delete</Icon>
+                                    </IconButton>
+                                    <IconButton size={'small'} onClick={handleEdit(note)}>
+                                        <Icon fontSize={'small'}>edit</Icon>
+                                    </IconButton>
+                                </>
                             }>
-                            </CardHeader>
-                            <CardContent>
-                                {note.note}
-                            </CardContent>
-                        </Card>
-                    </div>
+                        </CardHeader>
+                        <CardContent>
+                            {note.note}
+                        </CardContent>
+                    </Card>
                 )
             })
             }
